@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>متابعة العملاء - كابتن كريم طه</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#17171b;--line:#2a2a30;--tx:#fff;--mu:#9a9aa2;--red:#e10600;--ok:#2fbf71;--warn:#ff9f1a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{color-scheme:dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Tajawal,Barlow,system-ui,sans-serif}
+body[data-l=ar] .en,body[data-l=en] .ar{display:none}
+.w{max-width:720px;margin:0 auto;padding:0 16px}
+.hero{padding:26px 0 14px;background:radial-gradient(ellipse at 20% 0,rgba(225,6,0,.45),transparent 65%),var(--bg)}
+.hero small{color:var(--red);font-weight:700}
+h1{margin:2px 0;font-size:clamp(32px,9vw,46px);font-weight:800;line-height:1.15}
+.lead{color:var(--mu);margin:2px 0 0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(11,11,13,.95);border-bottom:1px solid var(--line)}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:8px;padding-bottom:8px}
+button{font:inherit;cursor:pointer;color:var(--tx)}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-weight:600}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.st div{background:var(--card);border-radius:12px;padding:12px 6px;text-align:center;border-top:3px solid var(--red)}
+.st b{display:block;font-size:30px;font-weight:800;line-height:1.1}
+.st span{color:var(--mu);font-size:13px}
+h2{font-size:21px;font-weight:800;margin:22px 0 10px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin-bottom:12px}
+.l{display:block;font-weight:700;margin:12px 0 6px}
+input[type=text],input[type=tel],input[type=date]{width:100%;font:inherit;color:var(--tx);background:#0f0f12;border:2px solid var(--line);border-radius:10px;padding:10px 12px;min-height:48px}
+input:focus{border-color:var(--red);outline:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chips button{background:#0f0f12;border:2px solid var(--line);border-radius:20px;padding:7px 14px}
+.hint{color:var(--ok);font-weight:700;margin:10px 0 0;min-height:24px}
+.hint.e{color:#ff8b85}
+.main{width:100%;min-height:52px;border:0;border-radius:12px;background:var(--red);font-weight:800;font-size:17px;margin-top:10px}
+.ghost{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 14px;min-height:44px}
+.go{background:var(--ok);color:#04210f;border:0;border-radius:10px;padding:9px 16px;min-height:44px;font-weight:800}
+.undo{background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-height:40px;color:var(--mu)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.nm{font-weight:800;font-size:18px}.mu{color:var(--mu);font-size:14px}
+.chip{display:inline-block;border-radius:12px;padding:2px 10px;font-size:13px;font-weight:700;background:var(--line)}
+.c-late{background:#5c0d0a;color:#ff9b95}.c-now{background:#4d3000;color:#ffc46b}.c-done{background:#0c3b22;color:#7be0a8}.c-on{background:#0c3b22;color:#7be0a8}.c-up{background:#1d2a44;color:#9bbcff}
+.pb{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:10px 0 6px}.pb i{display:block;height:100%;background:var(--red)}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+a.ghost{color:var(--tx);text-decoration:none;display:inline-flex;align-items:center}
+.cl{border-top:1px solid var(--line);margin-top:12px;padding-top:6px}
+.cr{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #202026;flex-wrap:wrap}
+.due{border-right:4px solid var(--warn)}.due.late{border-right-color:var(--red)}
+.empty{text-align:center;color:var(--mu);padding:18px 0}
+.hide{display:none}
+button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+footer{color:var(--mu);font-size:13px;text-align:center;padding:22px 0 40px}
+</style></head><body data-l="ar">
+<header class="hero"><div class="w"><small>Captain Karim Taha</small><h1><span class="ar">متابعة العملاء</span><span class="en">Client follow-up</span></h1><p class="lead"><span class="ar">اشتراكات العملاء ومكالمات المتابعة الأسبوعية</span><span class="en">Subscriptions and weekly check-in calls</span></p></div></header>
+<div class="bar"><div class="w"><button class="pill" id="add" type="button"><span class="ar">+ عميل جديد</span><span class="en">+ New client</span></button><button class="pill" id="lg" type="button">English</button></div></div>
+<main class="w">
+<div class="st"><div><b id="s1">0</b><span class="ar">اشتراكات نشطة</span><span class="en">Active clients</span></div><div><b id="s2">0</b><span class="ar">مكالمات اليوم</span><span class="en">Calls today</span></div><div><b id="s3">0</b><span class="ar">مكالمات متأخرة</span><span class="en">Overdue calls</span></div></div>
+<section class="card hide" id="fm"><div class="nm" id="ft"></div>
+<label class="l" for="cn"><span class="ar">اسم العميل *</span><span class="en">Client name *</span></label><input type="text" id="cn" maxlength="60" autocomplete="off">
+<label class="l" for="cp"><span class="ar">رقم الهاتف (اختياري، للاتصال المباشر)</span><span class="en">Phone number (optional, for one-tap calling)</span></label><input type="tel" id="cp" inputmode="tel" autocomplete="off">
+<div class="g2"><div><label class="l" for="cs"><span class="ar">بداية الاشتراك *</span><span class="en">Start date *</span></label><input type="date" id="cs"></div><div><label class="l" for="ce"><span class="ar">نهاية الاشتراك *</span><span class="en">End date *</span></label><input type="date" id="ce"></div></div>
+<div class="chips" id="dur"><button type="button" data-m="1"><span class="ar">شهر</span><span class="en">1 month</span></button><button type="button" data-m="2"><span class="ar">شهرين</span><span class="en">2 months</span></button><button type="button" data-m="3"><span class="ar">3 شهور</span><span class="en">3 months</span></button><button type="button" data-m="6"><span class="ar">6 شهور</span><span class="en">6 months</span></button></div>
+<p class="hint" id="hint"></p>
+<button class="main" id="sv" type="button"></button><button class="ghost" id="cx" type="button" style="margin-top:8px;width:100%"><span class="ar">إلغاء</span><span class="en">Cancel</span></button></section>
+<h2><span class="ar">اتصالات اليوم والمتأخرة</span><span class="en">Calls due today and overdue</span></h2><div id="due"></div>
+<h2><span class="ar">العملاء</span><span class="en">Clients</span></h2><div id="clients"></div>
+<div class="acts"><button class="ghost" id="ex" type="button"><span class="ar">نسخة احتياطية</span><span class="en">Back up</span></button><button class="ghost" id="im" type="button"><span class="ar">استعادة نسخة</span><span class="en">Restore</span></button><input type="file" id="fi" accept=".json,application/json" class="hide"></div>
+</main>
+<footer class="w"><span class="ar">البيانات محفوظة على هذا الجهاز فقط. خذ نسخة احتياطية من وقت لآخر.</span><span class="en">Data is saved on this device only. Back it up from time to time.</span></footer>
+<script>
+var L="ar",KEY="kt-clients",C=[],edit=null,open={};
+function t(a,e){return L=="ar"?a:e}
+function $(i){return document.getElementById(i)}
+function pad(n){return(n<10?"0":"")+n}
+function today(){var d=new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function ms(s){var p=s.split("-");return Date.UTC(+p[0],+p[1]-1,+p[2])}
+function iso(m){return new Date(m).toISOString().slice(0,10)}
+function addD(s,n){return iso(ms(s)+n*864e5)}
+function addM(s,k){var p=s.split("-"),y=+p[0],m=+p[1]-1+k,d=+p[2],dim=new Date(Date.UTC(y,m+1,0)).getUTCDate();return iso(Date.UTC(y,m,Math.min(d,dim)))}
+function fd(s){return new Date(ms(s)).toLocaleDateString(L=="ar"?"ar-EG":"en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+try{C=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){C=[]}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(C))}catch(e){}}
+function calls(c){var n=Math.floor((ms(c.end)-ms(c.start))/864e5/7),a=[];for(var i=1;i<=n;i++)a.push({n:i,due:addD(c.start,7*i),done:(c.done||{})[i]||""});return a}
+function state(c){var T=today();return T<c.start?"up":T>c.end?"end":"on"}
+function cst(k,c){if(k.done)return"done";var T=today();if(k.due<T)return state(c)=="end"?"missed":"late";return k.due==T?"now":"soon"}
+function chip(s,k){var m={late:[t("متأخرة","Overdue"),"c-late"],now:[t("اليوم","Today"),"c-now"],done:[t("تمت","Done"),"c-done"],soon:[t("قادمة","Upcoming"),"c-up"],missed:[t("فائتة","Missed"),""]}[s];return'<span class="chip '+m[1]+'">'+m[0]+'</span>'}
+function days(a,b){return Math.round((ms(a)-ms(b))/864e5)}
+function digits(p){var d=String(p||"").replace(/\D/g,"");if(d.indexOf("00")==0)d=d.slice(2);else if(d[0]=="0")d="20"+d.slice(1);return d}
+function links(c){if(!c.phone)return"";var tel=String(c.phone).replace(/[^\d+]/g,"");return'<a class="ghost" href="tel:'+esc(tel)+'">'+t("اتصال","Call")+'</a><a class="ghost" target="_blank" rel="noopener" href="https://wa.me/'+digits(c.phone)+'">'+t("واتساب","WhatsApp")+'</a>'}
+function dueItems(){var o=[];C.forEach(function(c){if(state(c)=="end")return;calls(c).forEach(function(k){var s=cst(k,c);if(s=="late"||s=="now")o.push({c:c,k:k,s:s})})});o.sort(function(a,b){return a.k.due<b.k.due?-1:a.k.due>b.k.due?1:0});return o}
+function dueHtml(x){var c=x.c,k=x.k,tot=calls(c).length,late=x.s=="late"?days(today(),k.due):0;
+return'<div class="card due '+(x.s=="late"?"late":"")+'"><div class="row"><div><div class="nm">'+esc(c.name)+'</div><div class="mu">'+t("مكالمة ","Call ")+k.n+t(" من "," of ")+tot+" | "+fd(k.due)+(late?" | "+t("متأخرة "+late+" يوم",late+" days late"):"")+'</div></div>'+chip(x.s)+'</div><div class="acts">'+links(c)+'<button class="go" data-d="'+c.id+":"+k.n+'">'+t("تم الاتصال","Done")+'</button></div></div>'}
+function cardHtml(c){var cl=calls(c),dn=cl.filter(function(k){return k.done}).length,st=state(c),nx=null;
+if(st!="end")cl.some(function(k){if(!k.done){nx=k;return 1}});
+var stl={on:[t("نشط","Active"),"c-on"],up:[t("لم يبدأ","Not started"),"c-up"],end:[t("منتهي","Ended"),""]}[st];
+var h='<div class="card"><div class="row"><div><div class="nm">'+esc(c.name)+'</div><div class="mu">'+fd(c.start)+" - "+fd(c.end)+'</div></div><span class="chip '+stl[1]+'">'+stl[0]+'</span></div>';
+if(!cl.length)h+='<p class="mu">'+t("لا توجد مكالمات (الاشتراك أقل من أسبوع).","No calls (subscription is shorter than a week).")+'</p>';
+else{h+='<div class="pb"><i style="width:'+Math.round(dn/cl.length*100)+'%"></i></div><div class="mu">'+t("المكالمات: ","Calls: ")+dn+" / "+cl.length+(nx?" | "+t("القادمة: ","Next: ")+fd(nx.due):"")+'</div>'}
+h+='<div class="acts">'+links(c)+(cl.length?'<button class="ghost" data-o="'+c.id+'">'+(open[c.id]?t("إخفاء المكالمات","Hide calls"):t("كل المكالمات","All calls"))+'</button>':"")+'<button class="ghost" data-e="'+c.id+'">'+t("تعديل","Edit")+'</button><button class="ghost" data-x="'+c.id+'">'+t("حذف","Delete")+'</button></div>';
+if(open[c.id])h+='<div class="cl">'+cl.map(function(k){var s=cst(k,c);return'<div class="cr"><span>'+t("مكالمة ","Call ")+k.n+" | "+fd(k.due)+'</span><span>'+chip(s)+'</span>'+(k.done?'<span class="mu">'+fd(k.done)+'</span><button class="undo" data-d="'+c.id+":"+k.n+'">'+t("تراجع","Undo")+'</button>':'<button class="go" data-d="'+c.id+":"+k.n+'">'+t("تم الاتصال","Done")+'</button>')+'</div>'}).join("")+'</div>';
+return h+'</div>'}
+function nextDue(c){if(state(c)=="end")return"9999";var r="9998";calls(c).some(function(k){if(!k.done){r=k.due;return 1}});return r}
+function render(){var d=dueItems(),now=d.filter(function(x){return x.s=="now"}).length;
+$("s1").textContent=C.filter(function(c){return state(c)=="on"}).length;$("s2").textContent=now;$("s3").textContent=d.length-now;
+$("due").innerHTML=d.length?d.map(dueHtml).join(""):'<div class="empty">'+t("لا توجد مكالمات مستحقة اليوم.","No calls due today.")+'</div>';
+var s=C.slice().sort(function(a,b){var x=nextDue(a),y=nextDue(b);return x<y?-1:x>y?1:0});
+$("clients").innerHTML=s.length?s.map(cardHtml).join(""):'<div class="empty">'+t("لم تضف أي عميل بعد. اضغط + عميل جديد.","No clients yet. Tap + New client.")+'</div>';
+$("ft").textContent=edit?t("تعديل بيانات العميل","Edit client"):t("إضافة عميل جديد","Add a new client");$("sv").textContent=edit?t("حفظ التعديلات","Save changes"):t("حفظ العميل","Save client");hint()}
+function hint(){var s=$("cs").value,e=$("ce").value,h=$("hint");h.className="hint";if(!s||!e){h.textContent="";return}
+if(e<s){h.className="hint e";h.textContent=t("تاريخ النهاية قبل البداية.","The end date is before the start date.");return}
+var n=calls({start:s,end:e}).length;h.textContent=t("عدد مكالمات المتابعة: ","Number of check-in calls: ")+n+t(" (مكالمة كل أسبوع)"," (one every week)")}
+function show(v){$("fm").classList.toggle("hide",!v);if(v){$("cn").focus();window.scrollTo({top:0,behavior:"smooth"})}}
+function clear(){edit=null;["cn","cp","ce"].forEach(function(i){$(i).value=""});$("cs").value=today();show(false);render()}
+$("add").onclick=function(){if(edit){clear()}$("fm").classList.contains("hide")?(show(true),render()):show(false)};
+$("cx").onclick=clear;
+$("lg").onclick=function(){L=L=="ar"?"en":"ar";document.body.dataset.l=L;document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";$("lg").textContent=L=="ar"?"English":"عربي";render()};
+$("cs").oninput=$("ce").oninput=hint;
+$("dur").onclick=function(e){var b=e.target.closest("button");if(!b)return;if(!$("cs").value)$("cs").value=today();$("ce").value=addM($("cs").value,+b.dataset.m);hint()};
+$("sv").onclick=function(){var n=$("cn").value.trim(),s=$("cs").value,e=$("ce").value,h=$("hint");
+if(!n||!s||!e){h.className="hint e";h.textContent=t("اكتب الاسم وتاريخ البداية والنهاية.","Enter the name, start date and end date.");return}
+if(e<s){hint();return}
+if(edit){C.forEach(function(c){if(c.id==edit){c.name=n;c.phone=$("cp").value.trim();c.start=s;c.end=e}})}
+else C.push({id:"c"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),name:n,phone:$("cp").value.trim(),start:s,end:e,done:{}});
+save();clear()};
+document.addEventListener("click",function(ev){var b=ev.target.closest("button");if(!b)return;var d=b.dataset;
+if(d.d){var p=d.d.split(":");C.forEach(function(c){if(c.id==p[0]){c.done=c.done||{};if(c.done[p[1]])delete c.done[p[1]];else c.done[p[1]]=today()}});save();render()}
+else if(d.o){open[d.o]=!open[d.o];render()}
+else if(d.e){var c=C.filter(function(x){return x.id==d.e})[0];if(!c)return;edit=c.id;$("cn").value=c.name;$("cp").value=c.phone||"";$("cs").value=c.start;$("ce").value=c.end;show(true);render()}
+else if(d.x){var c2=C.filter(function(x){return x.id==d.x})[0];if(c2&&confirm(t("حذف "+c2.name+" وكل مكالماته؟","Delete "+c2.name+" and all their calls?"))){C=C.filter(function(x){return x.id!=d.x});save();render()}}});
+$("ex").onclick=function(){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(C,null,1)],{type:"application/json"}));a.download="clients-backup-"+today()+".json";document.body.appendChild(a);a.click();a.remove()};
+$("im").onclick=function(){$("fi").click()};
+$("fi").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var j=JSON.parse(r.result);if(!Array.isArray(j)||j.some(function(c){return!c.name||!c.start||!c.end}))throw 0;if(confirm(t("استبدال البيانات الحالية بالنسخة؟","Replace the current data with this backup?"))){C=j;save();render()}}catch(e){alert(t("الملف غير صالح.","This file is not valid."))}};r.readAsText(f);this.value=""};
+$("cs").value=today();render();
+</script><style>.homefab{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));inset-inline-start:14px;z-index:20;width:48px;height:48px;border-radius:50%;background:#e10600;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.5)}@media print{.homefab{display:none}}</style><a class="homefab" href="/" aria-label="Home"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></svg></a>
+</body></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>خطة التغذية - كابتن كريم طه</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#17171b;--line:#2a2a30;--tx:#fff;--mu:#9a9aa2;--red:#e10600;--ok:#2fbf71;--P:#4aa3ff;--C:#ffc83d;--F:#ff7a59;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{color-scheme:dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Tajawal,Barlow,system-ui,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:0 16px}
+.hero{padding:26px 0 12px;background:radial-gradient(ellipse at 20% 0,rgba(225,6,0,.45),transparent 65%),var(--bg)}
+.hero small{color:var(--red);font-weight:700}
+h1{margin:2px 0;font-size:clamp(32px,9vw,46px);font-weight:800;line-height:1.15}
+.lead{color:var(--mu);margin:2px 0 0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(11,11,13,.95);border-bottom:1px solid var(--line)}
+.bar .w{display:flex;gap:8px;align-items:center;padding-top:8px;padding-bottom:8px}
+.bar select{flex:1;min-width:0}
+button{font:inherit;cursor:pointer;color:var(--tx)}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:8px 14px;font-weight:600;white-space:nowrap}
+.card{background:var(--card);border-radius:14px;padding:16px;margin:14px 0;border-top:3px solid var(--red)}
+.card h2{margin:0 0 6px;font-size:20px;font-weight:800}
+.l{display:block;font-weight:700;margin:12px 0 6px}
+input,select,textarea{width:100%;font:inherit;color:var(--tx);background:#0f0f12;border:2px solid var(--line);border-radius:10px;padding:9px 12px;min-height:46px}
+input:focus,select:focus{border-color:var(--red);outline:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips button{background:#0f0f12;border:2px solid var(--line);border-radius:20px;padding:8px 14px;min-height:42px}
+.chips button.on{background:var(--red);border-color:var(--red)}
+.tile{background:#0f0f12;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-top:12px}
+.tile b{display:block;font-size:30px;font-weight:800;line-height:1.1}.tile span,.mu{color:var(--mu);font-size:13px}
+.note{color:var(--mu);font-size:13px;margin:8px 0 0}
+.mc{background:#0f0f12;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}
+.mc .t{font-weight:800;margin-bottom:6px}.mc input{text-align:center;font-weight:700}
+.mc .v{margin-top:6px;font-size:14px;color:var(--mu)}.mc .v b{color:var(--tx)}
+.warn{color:#ffb4ae;font-weight:700;margin-top:8px;min-height:22px}.warn.ok{color:var(--ok)}
+.meal{background:#0f0f12;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.row{display:flex;gap:8px;align-items:center}
+.mn{font-weight:800;font-size:17px}
+.x{background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:46px;flex:none;font-size:20px;color:var(--mu)}
+.it{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.nf small{display:block;color:var(--mu);font-size:12px;margin:6px 0 2px}
+.ghost{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 14px;min-height:44px;margin-top:10px}
+.mt{margin-top:10px;font-weight:700;color:#fff;font-size:14px}
+.mt i{font-style:normal;margin-inline-end:10px}
+.pc{color:var(--P)}.cc{color:var(--C)}.fc{color:var(--F)}
+.main{width:100%;min-height:52px;border:0;border-radius:12px;background:var(--red);font-weight:800;font-size:17px;margin-top:10px}
+.dt{display:flex;justify-content:space-between;margin-top:10px;font-size:15px}
+.pb{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:4px}.pb i{display:block;height:100%;background:var(--red);max-width:100%}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.sum div{background:var(--card);border-radius:12px;padding:10px 4px;text-align:center;border-top:3px solid var(--red)}
+.sum b{display:block;font-size:24px;font-weight:800;line-height:1.1}.sum span{color:var(--mu);font-size:12px}
+.fd{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}.fd span:last-child{white-space:nowrap;color:var(--mu);font-size:14px}
+.cv .ed,.ed.hide,.hide{display:none!important}
+body[data-l=ar] .en,body[data-l=en] .ar{display:none}
+details summary{cursor:pointer;font-weight:700}
+.meta{display:flex;gap:6px 14px;flex-wrap:wrap;color:var(--mu);font-size:14px;margin-top:6px}
+button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+footer{color:var(--mu);font-size:13px;text-align:center;padding:20px 0 40px}
+@media print{body{background:#fff;color:#000}.bar,.no-print,.hero:after{display:none!important}.hero{background:#fff}.card,.sum div,.meal,.mc,.tile{background:#fff!important;border:1px solid #ccc!important;color:#000}.mu,.lead,.sum span,.fd span:last-child{color:#444!important}h1{color:#000}}
+</style></head><body data-l="ar">
+<header class="hero"><div class="w"><small>Captain Karim Taha</small><h1><span class="ar">خطة التغذية</span><span class="en">Nutrition plan</span></h1><p class="lead" id="sub"></p></div></header>
+<div class="bar ed no-print" id="bar"><div class="w"><select id="pl" aria-label="plans"></select><button class="pill" id="nw" type="button"><span class="ar">+ جديد</span><span class="en">+ New</span></button><button class="pill" id="lg" type="button">English</button></div></div>
+<div class="bar no-print" id="bar2" hidden><div class="w" style="justify-content:flex-end"><button class="pill" id="lg2" type="button">English</button><button class="pill" id="pr" type="button"><span class="ar">طباعة / PDF</span><span class="en">Print / PDF</span></button></div></div>
+<main class="w" id="app"></main>
+<footer class="w">Captain Karim Taha | <span class="ar">مدرب شخصي</span><span class="en">Personal trainer</span></footer>
+<script>
+var L="ar",P=null,S={},KEY="kt-diet",cv=false,V=null;
+function t(a,e){return L=="ar"?a:e}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function num(v){v=parseFloat(v);return isFinite(v)?v:0}
+function r0(x){return Math.round(x)}
+function r1(x){return Math.round(x*10)/10}
+function today(){var d=new Date(),p=function(n){return(n<10?"0":"")+n};return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate())}
+function newPlan(){var a=L=="ar";return{id:"p"+Date.now().toString(36),name:"",phone:"",coach:"Captain Karim Taha",from:today(),to:"",type:"bal",other:"",gender:"m",age:"",w:"",h:"",pbf:"",act:"2",goal:"lose",adj:"500",cp:"40",pp:"30",fp:"30",meals:[1,2,3,4,5].map(function(i){return{n:i==1?(a?"الفطار":"Breakfast"):(a?"وجبة ":"Meal ")+i,items:[{f:"",p:"",c:"",fa:""}]}})}}
+try{S=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){S={}}
+function persist(){if(cv)return;S[P.id]=P;try{localStorage.setItem(KEY,JSON.stringify(S));localStorage.setItem(KEY+"-cur",P.id)}catch(e){}}
+function calc(o){var w=num(o.w),h=num(o.h),a=num(o.age),bmr=0;if(w&&h&&a)bmr=10*w+6.25*h-5*a+(o.gender=="m"?5:-161);
+var tdee=bmr*([1.2,1.375,1.55,1.725,1.9][+o.act-1]||1.2),adj=num(o.adj),dci=tdee?(o.goal=="lose"?tdee-adj:o.goal=="gain"?tdee+adj:tdee):0;if(dci<0)dci=0;
+var pc=num(o.cp),pp=num(o.pp),pf=num(o.fp);
+return{bmr:bmr,tdee:tdee,dci:dci,sum:pc+pp+pf,kc:dci*pc/100,kp:dci*pp/100,kf:dci*pf/100,gc:dci*pc/400,gp:dci*pp/400,gf:dci*pf/900}}
+function mt(m){var p=0,c=0,f=0;m.items.forEach(function(i){p+=num(i.p);c+=num(i.c);f+=num(i.fa)});return{p:p,c:c,f:f,k:4*p+4*c+9*f}}
+function day(ms){var d={p:0,c:0,f:0,k:0};ms.forEach(function(m){var x=mt(m);d.p+=x.p;d.c+=x.c;d.f+=x.f;d.k+=x.k});return d}
+function chips(k,opts,cur){return'<div class="chips">'+opts.map(function(o){return'<button type="button" data-s="'+k+':'+o[0]+'" class="'+(cur==o[0]?"on":"")+'">'+o[1]+'</button>'}).join("")+'</div>'}
+function inp(k,lab,type,extra){return'<label class="l" for="i-'+k+'">'+lab+'</label><input id="i-'+k+'" data-k="'+k+'" type="'+type+'" '+(type=="number"?'inputmode="decimal" ':"")+(extra||"")+' value="'+esc(P[k])+'">'}
+function card(h,b,n){return'<section class="card"><h2>'+h+'</h2>'+(n?'<p class="mu" style="margin:0">'+n+'</p>':"")+b+'</section>'}
+function mealHtml(m,i){return'<div class="meal"><div class="row"><input class="mn" data-mn="'+i+'" value="'+esc(m.n)+'" aria-label="meal name"><button class="x" data-dm="'+i+'" type="button" aria-label="delete">\u00d7</button></div>'+m.items.map(function(it,j){return'<div class="it"><div class="row"><input data-m="'+i+'" data-i="'+j+'" data-f="f" placeholder="'+t("الطعام والكمية (مثال: 150 جم صدور دجاج)","Food and amount (e.g. 150 g chicken breast)")+'" value="'+esc(it.f)+'"><button class="x" data-di="'+i+':'+j+'" type="button" aria-label="delete">\u00d7</button></div><div class="g3">'+[["p",t("بروتين (جم)","Protein (g)")],["c",t("كارب (جم)","Carbs (g)")],["fa",t("دهون (جم)","Fats (g)")]].map(function(x){return'<label class="nf"><small>'+x[1]+'</small><input inputmode="decimal" data-m="'+i+'" data-i="'+j+'" data-f="'+x[0]+'" value="'+esc(it[x[0]])+'"></label>'}).join("")+'</div></div>'}).join("")+'<button class="ghost" data-ai="'+i+'" type="button">'+t("+ إضافة طعام","+ Add food")+'</button><div class="mt" id="mt'+i+'"></div></div>'}
+function build(){cv=false;document.body.classList.remove("cv");$("bar").hidden=false;$("bar2").hidden=true;$("sub").textContent=t("أنشئ خطة تغذية خاصة بكل عميل وأرسلها له برابط","Create a nutrition plan for each client and send it as a link");
+var h="";
+h+=card(t("بيانات العميل والخطة","Client and plan"),inp("name",t("اسم العميل","Member name"),"text")+inp("phone",t("رقم واتساب العميل (للإرسال المباشر)","Client WhatsApp number (for direct sending)"),"tel",'inputmode="tel"')+inp("coach",t("اسم المدرب","Coach name"),"text")+'<div class="g2"><div>'+inp("from",t("من","From"),"date")+'</div><div>'+inp("to",t("إلى","To"),"date")+'</div></div><div class="l">'+t("نوع النظام","Nutrition plan")+'</div>'+chips("type",[["bal",t("نظام متوازن","Balanced diet")],["carb",t("تدوير الكربوهيدرات","Carb cycle")],["veg",t("نباتي","Vegan")],["oth",t("آخر","Other")]],P.type)+inp("other",t("اسم النظام (لو آخر)","Plan name (if other)"),"text"));
+h+=card("BMR",'<div class="l">'+t("النوع","Gender")+'</div>'+chips("gender",[["m",t("ذكر","Male")],["f",t("أنثى","Female")]],P.gender)+'<div class="g2"><div>'+inp("age",t("العمر","Age"),"number")+'</div><div>'+inp("w",t("الوزن (كجم)","Weight (kg)"),"number")+'</div><div>'+inp("h",t("الطول (سم)","Height (cm)"),"number")+'</div><div>'+inp("pbf",t("نسبة الدهون % (اختياري)","Body fat % (optional)"),"number")+'</div></div><div class="tile"><b id="r-bmr">-</b><span>BMR (kcal)</span></div><p class="note">Men: (10 x kg) + (6.25 x cm) - (5 x age) + 5<br>Women: (10 x kg) + (6.25 x cm) - (5 x age) - 161</p>');
+h+=card("TDEE",'<label class="l" for="i-act">'+t("مستوى النشاط","Activity level")+'</label><select id="i-act" data-k="act">'+[[1,t("خامل (تمرين قليل أو معدوم)","Sedentary (little or no exercise)"),"1.2"],[2,t("نشاط خفيف (1-3 أيام/أسبوع)","Light (1-3 days/week)"),"1.375"],[3,t("نشاط متوسط (3-5 أيام/أسبوع)","Moderate (3-5 days/week)"),"1.55"],[4,t("نشاط عالٍ (6-7 أيام/أسبوع)","Very active (6-7 days/week)"),"1.725"],[5,t("نشاط شديد (رياضي، تدريب مكثف)","Super active (athlete, intense training)"),"1.9"]].map(function(o){return'<option value="'+o[0]+'"'+(P.act==o[0]?" selected":"")+'>'+o[1]+' x '+o[2]+'</option>'}).join("")+'</select><div class="tile"><b id="r-tdee">-</b><span>TDEE (kcal)</span></div>');
+h+=card("DCI",'<div class="l">'+t("الهدف","Goal")+'</div>'+chips("goal",[["lose",t("خسارة وزن","Lose weight")],["gain",t("بناء عضلات","Gain muscle")],["keep",t("ثبات الوزن","Maintain weight")]],P.goal)+inp("adj",t("كمية العجز / الزيادة (سعرة)","Deficit / surplus amount (kcal)"),"number")+'<div class="tile"><b id="r-dci">-</b><span>'+t("السعرات اليومية (DCI)","Daily calorie intake (DCI)")+'</span></div>');
+h+=card(t("توزيع الماكروز","Macros divide"),'<div class="chips" style="margin-top:8px">'+[["40/30/30"],["50/25/25"],["30/40/30"],["45/30/25"]].map(function(p){return'<button type="button" data-pre="'+p[0]+'">'+p[0]+'</button>'}).join("")+'</div><p class="note">'+t("كارب / بروتين / دهون (نسب مئوية)","Carbs / Protein / Fats (percent)")+'</p><div class="g3" style="margin-top:10px">'+[["cp",t("كارب","Carbs"),"c"],["pp",t("بروتين","Protein"),"p"],["fp",t("دهون","Fats"),"f"]].map(function(x){return'<div class="mc"><div class="t">'+x[1]+'</div><input id="i-'+x[0]+'" data-k="'+x[0]+'" inputmode="decimal" value="'+esc(P[x[0]])+'" aria-label="'+x[1]+' %"><div class="v"><b id="g-'+x[2]+'">0</b> g<br><b id="k-'+x[2]+'">0</b> kcal</div></div>'}).join("")+'</div><div class="warn" id="msum"></div>');
+h+=card(t("الوجبات","Meals"),'<div id="meals">'+P.meals.map(mealHtml).join("")+'</div><button class="ghost" id="am" type="button">'+t("+ إضافة وجبة","+ Add meal")+'</button><div id="dayt" style="margin-top:14px"></div>');
+h+=card(t("حفظ وإرسال الخطة للعميل","Save and send the plan to the client"),'<p class="note" style="margin-top:0">'+t("تُحفظ الخطة تلقائياً على هذا الجهاز مع كل تعديل. الزر التالي يحفظها وينشئ رابطاً خاصاً بهذا العميل يفتح الخطة للقراءة فقط، ويفتح واتساب لإرساله. الرابط لا يتضمن رقم العميل ولا عمره ولا وزنه ولا طوله.","The plan saves on this device automatically with every change. The button below saves it and creates a read-only link for this client, then opens WhatsApp to send it. The link does not include the client\u2019s number, age, weight or height.")+'</p><button class="main" id="mk" type="button">'+t("حفظ وإنشاء رابط الإرسال","Save and create the send link")+'</button><div id="lk" style="margin-top:10px"></div>');
+$("app").innerHTML=h;fill();calcUI()}
+function fill(){var o=Object.keys(S).map(function(k){return S[k]}).sort(function(a,b){return(a.name||"").localeCompare(b.name||"")});$("pl").innerHTML=o.map(function(p){return'<option value="'+p.id+'"'+(p.id==P.id?" selected":"")+'>'+esc(p.name||t("بدون اسم","Unnamed"))+'</option>'}).join("")+(S[P.id]?"":'<option value="'+P.id+'" selected>'+t("خطة جديدة","New plan")+'</option>')}
+function calcUI(){var r=calc(P);$("r-bmr").textContent=r.bmr?r0(r.bmr):"-";$("r-tdee").textContent=r.tdee?r0(r.tdee):"-";$("r-dci").textContent=r.dci?r0(r.dci):"-";
+["c","p","f"].forEach(function(k){$("g-"+k).textContent=r0(r["g"+k]);$("k-"+k).textContent=r0(r["k"+k])});
+var w=$("msum");w.className="warn"+(r1(r.sum)==100?" ok":"");w.textContent=r1(r.sum)==100?t("المجموع 100% \u2713","Total 100% \u2713"):t("المجموع "+r1(r.sum)+"% (يجب أن يكون 100%)","Total "+r1(r.sum)+"% (must be 100%)");
+P.meals.forEach(function(m,i){var x=mt(m);$("mt"+i).innerHTML='<i class="pc">'+t("بروتين ","P ")+r1(x.p)+'g</i><i class="cc">'+t("كارب ","C ")+r1(x.c)+'g</i><i class="fc">'+t("دهون ","F ")+r1(x.f)+'g</i><i>'+r0(x.k)+' kcal</i>'});
+var d=day(P.meals);$("dayt").innerHTML='<div class="l" style="margin-top:0">'+t("إجمالي اليوم مقابل الهدف","Day total vs target")+'</div>'+[[t("السعرات","Calories"),d.k,r.dci,"kcal"],[t("بروتين","Protein"),d.p,r.gp,"g"],[t("كارب","Carbs"),d.c,r.gc,"g"],[t("دهون","Fats"),d.f,r.gf,"g"]].map(function(x){var pct=x[2]?Math.min(100,x[1]/x[2]*100):0;return'<div class="dt"><span>'+x[0]+'</span><span><b>'+r0(x[1])+'</b> / '+r0(x[2])+' '+x[3]+'</span></div><div class="pb"><i style="width:'+pct+'%"></i></div>'}).join("")}
+function setP(k,v){P[k]=v}
+document.addEventListener("input",function(e){var t_=e.target,d=t_.dataset;if(cv)return;
+if(d.f){P.meals[+d.m].items[+d.i][d.f]=t_.value}else if(d.mn!=null){P.meals[+d.mn].n=t_.value}else if(d.k){P[d.k]=t_.value;if(d.k=="name"){persist();fill()}}else return;calcUI();persist()});
+document.addEventListener("change",function(e){var d=e.target.dataset;if(!cv&&d.k=="act"){P.act=e.target.value;calcUI();persist()}});
+document.addEventListener("click",function(e){var b=e.target.closest("button");if(!b||cv&&!b.dataset.vs)return;var d=b.dataset;
+if(d.s){var p=d.s.split(":");P[p[0]]=p[1];if(p[0]=="goal")P.adj=p[1]=="lose"?"500":p[1]=="gain"?"300":"0";persist();build()}
+else if(d.pre){var q=d.pre.split("/");P.cp=q[0];P.pp=q[1];P.fp=q[2];persist();build()}
+else if(d.ai!=null){P.meals[+d.ai].items.push({f:"",p:"",c:"",fa:""});persist();build()}
+else if(d.di){var z=d.di.split(":"),m=P.meals[+z[0]];if(m.items.length>1)m.items.splice(+z[1],1);else m.items[0]={f:"",p:"",c:"",fa:""};persist();build()}
+else if(d.dm!=null){if(P.meals.length>1&&confirm(t("حذف هذه الوجبة؟","Delete this meal?"))){P.meals.splice(+d.dm,1);persist();build()}}});
+$("app").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;if(b.id=="am"){P.meals.push({n:t("وجبة ","Meal ")+(P.meals.length+1),items:[{f:"",p:"",c:"",fa:""}]});persist();build()}else if(b.id=="mk")link()});
+$("nw").onclick=function(){P=newPlan();persist();build()};
+$("pl").onchange=function(){var p=S[this.value];if(p){P=p;persist();build()}};
+$("lg").onclick=$("lg2").onclick=function(){L=L=="ar"?"en":"ar";document.body.dataset.l=L;document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";$("lg").textContent=$("lg2").textContent=L=="ar"?"English":"\u0639\u0631\u0628\u064a";cv?view(V):build()};
+$("pr").onclick=function(){window.print()};
+function b64(u){var s="";for(var i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function unb64(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u}
+async function pipe(u,S_){var s=new S_("deflate-raw"),w=s.writable.getWriter();w.write(u);w.close();return new Uint8Array(await new Response(s.readable).arrayBuffer())}
+function pack(){var r=calc(P);return{l:L,n:P.name,c:P.coach,f:P.from,t:P.to,y:P.type,o:P.other,k:[r0(r.bmr),r0(r.tdee),r0(r.dci)],g:P.goal,a:P.adj,p:[P.cp,P.pp,P.fp],m:P.meals.map(function(m){return[m.n,m.items.filter(function(i){return i.f||num(i.p)||num(i.c)||num(i.fa)}).map(function(i){return[i.f,i.p,i.c,i.fa]})]})}}
+async function link(){if(!P.name.trim()){$("lk").innerHTML='<div class="warn">'+t("اكتب اسم العميل أولاً.","Enter the client name first.")+'</div>';return}
+var u=new TextEncoder().encode(JSON.stringify(pack())),c="r"+b64(u);try{if(window.CompressionStream)c="z"+b64(await pipe(u,CompressionStream))}catch(e){}
+persist();var url=location.href.split("#")[0]+"#p="+c;
+var dg=String(P.phone||"").replace(/\D/g,"");if(dg.indexOf("00")==0)dg=dg.slice(2);else if(dg[0]=="0")dg="20"+dg.slice(1);
+$("lk").innerHTML='<div class="warn ok">'+t("تم حفظ الخطة \u2713","Plan saved \u2713")+'</div><input id="lku" readonly value="'+esc(url)+'" aria-label="link"><div class="chips" style="margin-top:8px"><button class="pill" id="cp1" type="button">'+t("نسخ الرابط","Copy link")+'</button><a class="pill" style="color:#fff;text-decoration:none" target="_blank" rel="noopener" href="https://wa.me/'+dg+'?text='+encodeURIComponent(t("خطة التغذية الخاصة بك: ","Your nutrition plan: ")+url)+'">'+(dg?t("إرسال للعميل على واتساب","Send to the client on WhatsApp"):t("إرسال بواتساب","Send on WhatsApp"))+'</a></div><p class="note">'+t("لو عدّلت الخطة لاحقاً، أنشئ رابطاً جديداً وأرسله للعميل.","If you change the plan later, create a new link and send it again.")+'</p>';
+$("cp1").onclick=function(){var i=$("lku");i.select();(navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){$("cp1").textContent=t("تم النسخ \u2713","Copied \u2713")},function(){document.execCommand&&document.execCommand("copy")})}}
+function view(o){V=o;cv=true;document.body.classList.add("cv");$("bar").hidden=true;$("bar2").hidden=false;
+var d=day(o.m.map(function(m){return{items:m[1].map(function(i){return{p:i[1],c:i[2],fa:i[3]}})}})),tg={k:o.k[2],p:o.k[2]*num(o.p[1])/400,c:o.k[2]*num(o.p[0])/400,f:o.k[2]*num(o.p[2])/900};
+var ty={bal:t("نظام متوازن","Balanced diet"),carb:t("تدوير الكربوهيدرات","Carb cycle"),veg:t("نباتي","Vegan"),oth:o.o||t("آخر","Other")}[o.y]||"",gl={lose:t("خسارة وزن","Lose weight"),gain:t("بناء عضلات","Gain muscle"),keep:t("ثبات الوزن","Maintain weight")}[o.g]||"";
+$("sub").textContent=o.n;
+var h='<div class="meta"><span>'+t("المدرب: ","Coach: ")+esc(o.c)+'</span>'+(o.f?'<span>'+t("من ","From ")+'<bdi>'+esc(o.f)+'</bdi>'+(o.t?t(" إلى "," to ")+'<bdi>'+esc(o.t)+'</bdi>':"")+'</span>':"")+'<span>'+t("النظام: ","Plan: ")+esc(ty)+'</span></div>';
+h+='<div class="sum"><div><b>'+o.k[2]+'</b><span>'+t("سعرة","kcal")+'</span></div><div><b class="pc">'+r0(tg.p)+'g</b><span>'+t("بروتين","Protein")+'</span></div><div><b class="cc">'+r0(tg.c)+'g</b><span>'+t("كارب","Carbs")+'</span></div><div><b class="fc">'+r0(tg.f)+'g</b><span>'+t("دهون","Fats")+'</span></div></div>';
+h+=o.m.filter(function(m){return m[1].length}).map(function(m){var x=mt({items:m[1].map(function(i){return{p:i[1],c:i[2],fa:i[3]}})});return'<section class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0">'+esc(m[0])+'</h2><b>'+r0(x.k)+' kcal</b></div><div class="mt"><i class="pc">'+t("بروتين ","P ")+r1(x.p)+'g</i><i class="cc">'+t("كارب ","C ")+r1(x.c)+'g</i><i class="fc">'+t("دهون ","F ")+r1(x.f)+'g</i></div>'+(m[1].length?m[1].map(function(i){return'<div class="fd"><span>'+esc(i[0])+'</span><span>'+t("ب ","P ")+r1(num(i[1]))+" | "+t("ك ","C ")+r1(num(i[2]))+" | "+t("د ","F ")+r1(num(i[3]))+'</span></div>'}).join(""):'<p class="mu">-</p>')+'</section>'}).join("");
+h+='<section class="card"><h2>'+t("إجمالي اليوم","Day total")+'</h2>'+[[t("السعرات","Calories"),d.k,tg.k,"kcal"],[t("بروتين","Protein"),d.p,tg.p,"g"],[t("كارب","Carbs"),d.c,tg.c,"g"],[t("دهون","Fats"),d.f,tg.f,"g"]].map(function(x){return'<div class="dt"><span>'+x[0]+'</span><span><b>'+r0(x[1])+'</b> / '+r0(x[2])+' '+x[3]+'</span></div><div class="pb"><i style="width:'+(x[2]?Math.min(100,x[1]/x[2]*100):0)+'%"></i></div>'}).join("")+'</section>';
+h+='<section class="card"><details><summary>'+t("كيف حُسبت السعرات؟","How were the calories calculated?")+'</summary><p class="mu">BMR: '+o.k[0]+' kcal<br>TDEE: '+o.k[1]+' kcal<br>'+t("الهدف: ","Goal: ")+esc(gl)+(o.g!="keep"?" ("+(o.g=="lose"?"-":"+")+esc(o.a)+" kcal)":"")+'<br>DCI: '+o.k[2]+' kcal<br>'+t("الماكروز: كارب ","Macros: carbs ")+esc(o.p[0])+"% / "+t("بروتين ","protein ")+esc(o.p[1])+"% / "+t("دهون ","fats ")+esc(o.p[2])+'%</p></details></section>';
+$("app").innerHTML=h;document.title=o.n+" - "+t("خطة التغذية","Nutrition plan")}
+async function init(){var m=location.hash.match(/^#p=([zr])(.+)$/);
+if(m){try{var u=unb64(m[2]);if(m[1]=="z")u=await pipe(u,DecompressionStream);var o=JSON.parse(new TextDecoder().decode(u));L=o.l=="en"?"en":"ar";document.body.dataset.l=L;document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";$("lg").textContent=$("lg2").textContent=L=="ar"?"English":"\u0639\u0631\u0628\u064a";view(o);return}catch(e){$("app").innerHTML='<div class="card">'+t("الرابط غير صالح.","This link is not valid.")+'</div>';return}}
+var cur="";try{cur=localStorage.getItem(KEY+"-cur")}catch(e){}
+P=S[cur]||S[Object.keys(S)[0]]||newPlan();build()}
+init();
+</script><style>.homefab{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));inset-inline-start:14px;z-index:20;width:48px;height:48px;border-radius:50%;background:#e10600;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.5)}@media print{.homefab{display:none}}</style><a class="homefab" href="/" aria-label="Home"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></svg></a>
+</body></html>
